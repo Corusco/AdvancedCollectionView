@@ -13,8 +13,8 @@
 
 @interface AAPLCatDetailDataSource ()
 @property (nonatomic, strong) AAPLCat *cat;
-@property (nonatomic, strong) AAPLKeyValueDataSource<AAPLCat *> *classificationDataSource;
-@property (nonatomic, strong) AAPLTextValueDataSource<AAPLCat *> *descriptionDataSource;
+@property (nonatomic, strong) AAPLGenericOf(AAPLKeyValueDataSource, AAPLCat *) *classificationDataSource;
+@property (nonatomic, strong) AAPLGenericOf(AAPLTextValueDataSource, AAPLCat *) *descriptionDataSource;
 @end
 
 @implementation AAPLCatDetailDataSource
